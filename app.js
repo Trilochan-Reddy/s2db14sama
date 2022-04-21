@@ -61,22 +61,22 @@ async function recreateDB(){
  
   await petshop.deleteMany();
   
-  let instance1 = new petshop({Itemname:"petshop Garlic Bread", Quantity:20,
- price:"25.4"});
+  let instance1 = new petshop({Itemname:"Horgi", Quantity:22,
+ price:"Ten USD"});
   instance1.save( function(err,doc) {
   if(err) return console.error(err);
   console.log("First object saved")
   });
 
-  let instance2 = new petshop({Itemname:"French Toast", Quantity:40,
-  price:"25.4"});
+  let instance2 = new petshop({Itemname:"Irish", Quantity:40,
+  price:"Twenty Five USD"});
    instance2.save( function(err,doc) {
    if(err) return console.error(err);
    console.log("second object saved")
    });
 
-   let instance3 = new petshop({Itemname:"petshop Grilled Cheese Sandwich", Quantity:1,
-   price:"25.4"});
+   let instance3 = new petshop({Itemname:"Jack Chi", Quantity:15,
+   price:"Twenty Five USD"});
    instance3.save( function(err,doc) {
    if(err) return console.error(err);
    console.log("third object saved")
