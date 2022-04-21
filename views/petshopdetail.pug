@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1(id="titlestyle")= title
+
+  if (toShow == null)
+    h2 No instance to delete
+  else
+    - let petshopid = toShow._id
+    - let petshopItemname = toShow.Itemname
+    - let petshopQuantity = toShow.Quantity
+    - let petshopprice = toShow.price
+
+    div
+      div.row
+        div(class='costumeAttr mr-3') petshop ID is:
+        div(class='variety stylesheetnew') #{petshopid}
+      div.row
+        div(class='costumeAttr mr-3') petshop Itemname is:
+        div(class="variety") #{petshopItemname}
+      div.row
+        div(class='costumeAttr mr-3') petshop Quantity is:
+        div(class="variety") #{petshopQuantity}
+      div.row
+        div(class='costumeAttr mr-3') petshop price is:
+        div(class="variety") #{petshopprice}
+    
